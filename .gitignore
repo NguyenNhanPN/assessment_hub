@@ -1,0 +1,171 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pyc
+.Python
+
+# Virtual environments
+env/
+venv/
+.env
+.venv
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+*.whl
+MANIFEST
+
+# Testing
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+.pytest_cache/
+.cache/
+nosetests.xml
+test-results/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+
+# ========================
+# Frappe / Bench specific
+# ========================
+*.db
+*.sqlite
+*.sqlite3
+
+# Frappe site files (không commit site data)
+sites/
+logs/
+
+# Bench generated files
+apps.txt
+currentsite.txt
+
+# Node / JS build artifacts
+node_modules/
+.yarn/
+dist/
+*.min.js
+*.min.css
+*.bundle.js
+*.bundle.css
+
+# ========================
+# Editors & IDEs
+# ========================
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*#
+.#*
+\#*#
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ========================
+# OS generated files
+# ========================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+Icon?
+*.AppleDouble
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+
+# ========================
+# Logs & temp files
+# ========================
+*.log
+*.log.*
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+.tmp/
+tmp/
+
+# ========================
+# Security & secrets
+# ========================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.json
+site_config.json
+common_site_config.json
+
+# ========================
+# CI / CD
+# ========================
+.github/secrets/
+
+# ========================
+# Project specific
+# ========================
+# Postman (optional - bỏ comment nếu không muốn commit)
+# *_postman_collection.json
+
+# Frappe fixture exports tạm thời (bỏ comment nếu cần)
+# /assessment_hub/fixtures/workspace.json
+
+# Seed data & scratch scripts
+assessment_hub/scripts/
+*seed_data*
