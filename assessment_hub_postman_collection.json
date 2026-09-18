@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "8f3b2c1a-94d0-4e89-80b1-assessment-hub-v16",
+		"name": "Assessment Hub — Partner REST API (Frappe v16)",
+		"description": "Postman collection for testing Assessment Hub Partner REST API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. List Assessments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token {{api_token}}",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "{{site_name}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/method/assessment_hub.api.v1.assessments.list_assessments?status=Published&page_length=20",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"assessment_hub.api.v1.assessments.list_assessments"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Published"
+						},
+						{
+							"key": "page_length",
+							"value": "20"
+						},
+						{
+							"key": "title",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "updated_since",
+							"value": "2026-01-01 00:00:00",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Get Assessment Details (with questions)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token {{api_token}}",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "{{site_name}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/method/assessment_hub.api.v1.assessments.get_assessment?id=ASM-2026-00034&include_questions=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"assessment_hub.api.v1.assessments.get_assessment"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "ASM-2026-00034"
+						},
+						{
+							"key": "include_questions",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Create Question (Atomic Transaction)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token {{manager_token}}",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "{{site_name}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"assessment\": \"ASM-2026-00034\",\n  \"content\": \"What is the recommended Query Builder in Frappe Framework v16?\",\n  \"sort_order\": 1,\n  \"status\": \"Active\",\n  \"answers\": [\n    {\n      \"content\": \"frappe.qb\",\n      \"score\": 10,\n      \"sort_order\": 1\n    },\n    {\n      \"content\": \"SQL concatenation\",\n      \"score\": 0,\n      \"sort_order\": 2\n    },\n    {\n      \"content\": \"Direct file writes\",\n      \"score\": 0,\n      \"sort_order\": 3\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/method/assessment_hub.api.v1.questions.create_question",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"assessment_hub.api.v1.questions.create_question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. List Questions for Assessment",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "token {{api_token}}",
+						"type": "text"
+					},
+					{
+						"key": "Host",
+						"value": "{{site_name}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/method/assessment_hub.api.v1.questions.list_questions?assessment_id=ASM-2026-00034",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"method",
+						"assessment_hub.api.v1.questions.list_questions"
+					],
+					"query": [
+						{
+							"key": "assessment_id",
+							"value": "ASM-2026-00034"
+						},
+						{
+							"key": "status",
+							"value": "Active",
+							"disabled": true,
+							"description": "Filter by question status: Active or Inactive"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		},
+		{
+			"key": "site_name",
+			"value": "frappe.v16"
+		},
+		{
+			"key": "api_token",
+			"value": "91ab41adf7bb0fd4:21df595b9c839b15"
+		},
+		{
+			"key": "manager_token",
+			"value": "e0eefa347afe06c1:4338ea41e82be585"
+		}
+	]
+}
