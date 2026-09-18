@@ -1,0 +1,81 @@
+{
+ "app": "assessment_hub",
+ "charts": [],
+ "content": "[{\"id\": \"shortcuts\", \"type\": \"shortcut\", \"data\": {}}, {\"id\": \"number-card-total-assessments\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Assessments\"}}, {\"id\": \"number-card-total-questions\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Questions\"}}, {\"id\": \"quick-list-assessments\", \"type\": \"quick_list\", \"data\": {\"doctype\": \"Assessment\", \"label\": \"Recent Assessments\", \"count\": 5}}]",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "clipboard-check",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Assessment Hub",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assessment Management",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Assessment",
+   "link_count": 0,
+   "link_to": "Assessment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Question",
+   "link_count": 0,
+   "link_to": "Question",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "module": "Assessment Hub",
+ "name": "Assessment Hub",
+ "number_cards": [
+  {
+   "number_card_name": "Total Assessments"
+  },
+  {
+   "number_card_name": "Total Questions"
+  }
+ ],
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 31.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Assessments",
+   "link_to": "Assessment",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Questions",
+   "link_to": "Question",
+   "type": "DocType"
+  }
+ ],
+ "title": "Assessment Hub",
+ "type": "Workspace"
+}
