@@ -1,6 +1,6 @@
 # Bản Công Bố Sử Dụng AI (AI Disclosure)
-> **Dự án**: Assessment Hub — Module Frappe Framework v16 & Partner REST API  
-> **Cấp bậc đánh giá**: Full Module Frappe Developer  
+> **Dự án**: Assessment Hub — Module Frappe Framework v16 & Partner REST API
+> **Cấp bậc đánh giá**: Full Module Frappe Developer
 > **Mục tiêu**: Minh bạch công cụ hỗ trợ, prompt mẫu và quy trình kiểm soát chất lượng mã nguồn.
 
 ---
@@ -19,13 +19,10 @@ Trong quá trình phân tích và xây dựng ứng dụng, các công cụ AI v
 ### Prompt 1: Phân tích tài liệu yêu cầu & Lập kế hoạch kiến trúc
 > *"Đọc và phân tích yêu cầu trong file Bai_Test_Frappe16_Assessment_Module.pdf. Lập file kế hoạch implement.md chi tiết theo thứ tự từ trên xuống dưới bao gồm mô hình DocType, phân quyền Roles, tự động hóa fixtures/hooks và chuẩn Partner REST API Contract."*
 
-### Prompt 2: So sánh kiến trúc Child Table vs Standalone DocType
-> *"Phân tích ưu và nhược điểm giữa 2 phương án: Assessment Answer là Child Table của Question hay DocType độc lập có Link field? Đánh giá theo tiêu chuẩn Frappe Desk UX, toàn vẹn dữ liệu CSDL và Atomic REST API transaction."*
-
-### Prompt 3: Thiết kế Naming Rule tự động theo Expression
+### Prompt 2: Thiết kế Naming Rule tự động theo Expression
 > *"Thiết lập Naming Rule tự sinh mã theo Expression cho Assessment (dạng ASM-YYYY-#####) và Question (dạng QST-#####) chuẩn theo engine naming của Frappe v16."*
 
-### Prompt 4: Xử lý Atomic Transaction và Response Wrapper cho REST API
+### Prompt 3: Xử lý Atomic Transaction và Response Wrapper cho REST API
 > *"Xây dựng API decorator để chuẩn hóa phản hồi REST API: Thành công trả về `{"data": ...}`, thất bại trả về `{"errors": [{"message": "...", "code": "..."}]}`, bắt buộc Token Auth và thực hiện Atomic Transaction với `frappe.db.savepoint` khi tạo Question kèm Answers."*
 
 ---
