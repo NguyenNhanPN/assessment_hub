@@ -6,36 +6,52 @@
 
 ## 1. Hướng Dẫn Cài Đặt (Installation)
 
-### Yêu cầu môi trường chuẩn:
-- **Frappe Framework**: `version-16` (hoặc `version-15`)
-- **Python**: 3.11+
+### Yêu cầu môi trường:
+- **Frappe Framework**: `version-16` (khuyến nghị) hoặc `version-15`
+- **Python**: 3.11+ (Hỗ trợ tốt Python 3.14 trên Frappe v16)
 - **Database**: MariaDB 10.6+ (utf8mb4)
-- **Node.js**: 18+ (LTS 20/24), Yarn 1.22+
+- **Node.js**: 18+ (LTS 20/22/24), Yarn 1.22+
 - **Cache/Queue**: Redis 6+
 
-### Các bước cài đặt:
-1. Di chuyển vào thư mục bench của bạn:
+### Các bước cài đặt trực tiếp từ Git Repository:
+
+1. **Di chuyển vào thư mục Bench của bạn**:
    ```bash
    cd /path/to/your/frappe-bench
    ```
-2. Tải app vào bench từ repository:
-   ```bash
-   bench get-app <repo_url> --branch version-16
-   ```
-3. Cài đặt app lên site mục tiêu:
+
+2. **Tải ứng dụng vào Bench từ GitHub**:
+   - Sử dụng HTTPS:
+     ```bash
+     bench get-app https://github.com/NguyenNhanPN/assessment_hub.git
+     ```
+   - Hoặc sử dụng SSH:
+     ```bash
+     bench get-app git@github.com:NguyenNhanPN/assessment_hub.git
+     ```
+
+3. **Cài đặt ứng dụng lên Site mong muốn**:
    ```bash
    bench --site <site_name> install-app assessment_hub
    ```
-4. Thực hiện migrate để đồng bộ DocType, Roles và Workspace tự động:
+
+4. **Thực hiện Migrate để đồng bộ dữ liệu**:
    ```bash
    bench --site <site_name> migrate
    ```
 
-> **Ghi chú về After Install & Fixtures**:
-> Khi cài đặt lên site mới, app tự động kích hoạt hook `after_install` và `fixtures` để cấu hình sẵn:
-> - Roles: `Assessment Manager`, `Assessment Viewer`
-> - Workspaces & Number Cards: `Total Assessments`, `Total Questions`
-> - Đảm bảo phân quyền chuẩn mà không cần thao tác thủ công.
+5. **Dọn dẹp cache và khởi động lại Bench (nếu cần)**:
+   ```bash
+   bench --site <site_name> clear-cache
+   bench restart
+   ```
+
+> [!NOTE]
+> **Cơ chế Tự Động Hóa trên Frappe v16 (Zero Manual Setup)**:
+> Ngay sau khi chạy `install-app` hoặc `migrate`, hệ thống sẽ tự động:
+> - **Desktop Icon & Workspace Sidebar**: Đồng bộ biểu tượng **Assessment Hub** lên màn hình Desktop và tích hợp Sidebar điều hướng chuẩn SPA (`/desk/assessment-hub`).
+> - **Roles**: Tự động sinh 2 vai trò `Assessment Manager` và `Assessment Viewer`.
+> - **Number Cards & Workspace**: Tự động sinh báo cáo số liệu `Total Assessments`, `Total Questions` và liên kết truy cập nhanh các DocType `Assessment`, `Question`.
 
 ---
 
