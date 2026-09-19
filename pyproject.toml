@@ -1,7 +1,7 @@
 [project]
 name = "assessment_hub"
 authors = [
-    { name = "Nhan Nguyen", email = "nguyennhangilai@gmail.com"}
+    { name = "Nhan Nguyen", email = "nguyennhangialai@gmail.com"}
 ]
 description = "Assessment Management Module and Partner REST API"
 requires-python = ">=3.14"

@@ -1,0 +1,16 @@
+{
+ "app": "assessment_hub",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon": "clipboard-check",
+ "icon_type": "App",
+ "idx": 1,
+ "label": "Assessment Hub",
+ "link": "/desk/assessment-hub",
+ "link_type": "External",
+ "logo_url": "/assets/assessment_hub/images/logo.svg?v=2",
+ "name": "Assessment Hub",
+ "roles": [],
+ "standard": 1
+}

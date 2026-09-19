@@ -1,8 +1,8 @@
 app_name = "assessment_hub"
 app_title = "Assessment Hub"
-app_publisher = "Frappe Developer"
+app_publisher = "Nhan Nguyen"
 app_description = "Assessment Management Module and Partner REST API"
-app_email = "dev@assessmenthub.com"
+app_email = "nguyennhangialai@gmail.com"
 app_license = "mit"
 
 # Apps
@@ -14,11 +14,12 @@ app_license = "mit"
 add_to_apps_screen = [
 	{
 		"name": "assessment_hub",
-		"logo": "/assets/assessment_hub/images/logo.png",
+		"logo": "/assets/assessment_hub/images/logo.svg?v=2",
 		"title": "Assessment Hub",
-		"route": "/assessment_hub",
+		"route": "/desk/assessment-hub",
 	}
 ]
+
 
 # Includes in <head>
 # ------------------

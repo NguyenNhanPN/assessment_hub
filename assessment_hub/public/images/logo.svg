@@ -1,0 +1,18 @@
+<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M38.5714 0L15.4286 0C6.90761 0 0 6.90761 0 15.4286L0 38.5714C0 47.0924 6.90761 54 15.4286 54H38.5714C47.0924 54 54 47.0924 54 38.5714V15.4286C54 6.90761 47.0924 0 38.5714 0Z" fill="#7B808A"/>
+  <g stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Board Outline -->
+    <path d="M21 14H17C15.3431 14 14 15.3431 14 17V41C14 42.6569 15.3431 44 17 44H37C38.6569 44 40 42.6569 40 41V17C40 15.3431 38.6569 14 37 14H33" />
+    <!-- Clip Top -->
+    <rect x="21" y="10" width="12" height="6" rx="2" fill="#7B808A" stroke="white" stroke-width="2.2" />
+    <!-- Row 1 -->
+    <path d="M19 23L21.5 25.5L26 21" stroke-width="2" />
+    <line x1="29" y1="23" x2="35" y2="23" />
+    <!-- Row 2 -->
+    <path d="M19 30L21.5 32.5L26 28" stroke-width="2" />
+    <line x1="29" y1="30" x2="35" y2="30" />
+    <!-- Row 3 -->
+    <path d="M19 37L21.5 39.5L26 35" stroke-width="2" />
+    <line x1="29" y1="37" x2="33" y2="37" />
+  </g>
+</svg>
